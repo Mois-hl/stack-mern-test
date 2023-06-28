@@ -13,6 +13,9 @@ export default function NavBar() {
         <li>
           <Link to='/new'><span>Create task</span></Link>
         </li>
+        <li>
+          <Link to='/test'><span>Query test zone</span></Link>
+        </li>
       </ul>
     </div>
   )

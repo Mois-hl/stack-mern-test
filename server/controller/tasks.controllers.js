@@ -72,3 +72,15 @@ export const deleteTask = async (req, res) => {
     return res.status(500).json({ message: error.message })
   }
 }
+
+export const queryTask = async (req, res) => {
+  try {
+    const {data} = req.query;
+    const [rows, fields] = await pool.query(data);
+    console.log(rows);
+    console.log(fields);
+    res.json(rows);
+  } catch (error) {
+    return res.status(500).json({ message: error.message })
+  }
+}
